@@ -8,6 +8,9 @@
         h1{
             color: gold;
         }
+        #food-title{
+            color: green;
+        }
     </style>
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -16,15 +19,70 @@
         <h1>This is my header no banner</h1>
     </header>
     <main>
-        <h1>wecome to my DOM</h1>
-        <ul>
+       <section>
+         <h1>wecome to my DOM</h1>
+         <ul>
             <li>Ashik</li>
             <li>Shafayat</li>
-            <li>Jalali set</li>
-        </ul>
+            <li class="foreign">Bonobashi</li>
+            <li id="band">Jalali set</li>
+            <li class="international">Dubai</li>
+            <li>Dom De re baba</li>
+         </ul>
+       </section>
+       <section>
+         <h1 id="food-title">Foods I love</h1>
+         <ul>
+            <li>Rice</li>
+            <li>Potatto</li>
+            <li>Fish</li>
+            <li>Lentils</li>
+            <li class="foreign">Burger</li>
+            <li class="foreign">Pizza</li>
+            <li class="foreign">pasta</li>
+         </ul>
+       </section>
     </main>
     <script>
-        console.log('Hello from Javascript');
+        // console.log('Hello from Javascript');
+        const student={
+            name:'Ashik',
+            id:121,
+            study:function (subject){
+              console.log('studyig subject : ',subject)
+            }
+        }
+        // document.getElementsByTagName
+        const licollection = document.getElementsByTagName('li');
+        console.log(licollection);
+        for(const li of licollection){
+            console.log(li.innerText);
+        }
+
+        //all h1 tags
+        const allHeadings =document.getElementsByTagName('h1');
+        for(const heading of allHeadings){
+            // console.log(heading.innerText);
+        }
+
+        //get by id
+        const foodTitleH1=  document.getElementById('food-title');
+        console.log(foodTitleH1.innerText);
+        foodTitleH1.innerText='Foods I loved to eat';
+
+
+        const bandElement = document.getElementById('band');
+        bandElement.innerText='jalali slepping Band';
+
+
+
+        //get elements by class name
+        const foreignElements = document.getElementsByClassName('foreign');
+        console.log(foreignElements);
+        for(const element of foreignElements){
+            console.log(element.innerText);
+        }
+
     </script>
     <script src="js/hello.js"></script>
 </body>
