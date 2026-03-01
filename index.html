@@ -10,12 +10,13 @@
         }
         #food-title{
             color: green;
+            /* background-color: lightcyan; */
         }
         .bg-red{
             background-color: red;
         }
         .bold{
-            font-weight: 700;
+            font-weight: 900;
         }
         .food .foreign{
             font-weight: 100;
@@ -30,7 +31,7 @@
     <header>
         <h1>This is my header no banner</h1>
     </header>
-    <main>
+    <main id="main-container">
        <section id="old-dhaka" class="songs">
          <h1>wecome to my DOM</h1>
          <p>Lorem, ipsum dolor <span>oli goli</span> amet consectetur adipisicing elit. <span>Alias</span> nesciunt!</p>
@@ -39,7 +40,7 @@
             <li>Ashik</li>
             <li>Shafayat</li>
             <li class="foreign">Bonobashi</li>
-            <li id="band">Jalali set</li>
+            <li id="band" class="">Jalali set</li>
             <li class="international">Dubai</li>
             <li>Dom De re baba</li>
          </ul>
@@ -58,12 +59,13 @@
        </section>
        <section id="players-container">
         <h1>players</h1>
-        <ul>
+        <ul id="player-list">
             <li>Messi</li>
             <li>pele</li>
             <li>Ronaldo</li>
             <li>Embape</li>
-            <!-- <li>Cele</li> -->
+            <li>Cele</li>
+            
         </ul>
        </section>
     </main>
@@ -116,5 +118,7 @@
     </script>
     <script src="js/hello.js"></script>
     <script src="/js/cssInJS.js"></script>
+    <script src="/js/child.js"></script>
+    <script src="js/append.js"></script>
 </body>
 </html>
